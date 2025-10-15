@@ -3,7 +3,7 @@
     <!-- Bandeau de fond couvrant la largeur totale de l'écran -->
     <div class="pub-background">
       <img v-if="adImage" :src="adImage" alt="Publicité en habillage" />
-      <!-- <p>Emplacement habillage : https://www.francetvpub.fr/specificites-techniques-du-numerique/specificites-display/</p> -->
+      <!-- <p>Emplacement habillage</p> -->
     </div>
 
     <!-- Contenu principal du site entouré par la publicité -->
@@ -62,10 +62,6 @@ watch(
   }
 );
 
-
-// URL de l'image de la publicité (pourrait être un lien externe ou un import)
-// const adImage = ref('https://example.com/path/to/your-ad-image.jpg'); 
-
 onMounted(() => {
   fetchSignData();
 });
@@ -111,7 +107,7 @@ onMounted(() => {
   padding: 20px;
   background: white; /* Optionnel : Fond pour séparer du fond publicitaire */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour démarquer */
-  /* Quand il y aura de la pub : 
+  /* Pub
   margin-top: 200px; */
   margin-top: 20px;
   overflow: auto;
