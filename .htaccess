@@ -1,4 +1,7 @@
 <IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_HOST} ^votrehoroscopedujour\.fr [NC]
+  RewriteRule ^(.*)$ https://www.votrehoroscopedujour.fr/$1 [L,R=301]
+
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
