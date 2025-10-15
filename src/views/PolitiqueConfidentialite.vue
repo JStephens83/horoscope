@@ -29,6 +29,12 @@
   </div>
 </template>
 
+<script setup>
+  import { useCanonical } from '@/composables/useCanonical'
+
+  useCanonical()
+</script>
+
 <style scoped>
 .privacy-policy {
   max-width: 800px;

@@ -13,6 +13,10 @@
   import { useRoute } from 'vue-router';
   import Symbols from '@/components/Symbols.vue';
   import GlobalRssFeed from '@/components/GlobalRssFeed.vue';
+  import { useCanonical } from '@/composables/useCanonical'
+
+  
+  useCanonical()
 
   const route = useRoute();
 

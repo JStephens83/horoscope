@@ -8,6 +8,9 @@
   import { ref, onMounted } from 'vue';
   import { useRoute } from 'vue-router'; 
   import SpecificRssFeed from './SpecificRssFeed.vue';
+  import { useCanonical } from '@/composables/useCanonical'
+
+  useCanonical()
 
   const route = useRoute();
   const signId = route.params.signId;
