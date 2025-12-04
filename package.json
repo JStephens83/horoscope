@@ -20,6 +20,7 @@
     "axios": "^1.13.2",
     "buffer": "^6.0.3",
     "date-fns": "^4.1.0",
+    "esbuild": "^0.27.1",
     "iconv-lite": "^0.6.3",
     "pinia": "^3.0.1",
     "rss-parser": "^3.13.0",
