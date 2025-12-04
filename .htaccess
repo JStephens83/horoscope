@@ -1,8 +1,15 @@
 <IfModule mod_rewrite.c>
-  RewriteCond %{HTTP_HOST} ^votrehoroscopedujour\.fr [NC]
+  RewriteEngine On
+
+  # Rediriger HTTP vers HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+  # Rediriger ipv6 et non-www vers www
+  RewriteCond %{HTTP_HOST} ^(ipv6\.|)votrehoroscopedujour\.fr$ [NC]
   RewriteRule ^(.*)$ https://www.votrehoroscopedujour.fr/$1 [L,R=301]
 
-  RewriteEngine On
+  # SPA Vue.js fallback
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f

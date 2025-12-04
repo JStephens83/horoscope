@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { format } from 'date-fns';
 
-const baseUrl = 'https://votrehoroscopedujour.fr/sign';
+const baseUrl = 'https://www.votrehoroscopedujour.fr/sign';
 const zodiacSigns = [
   'belier', 'taureau', 'gemeaux', 'cancer', 'lion', 
   'vierge', 'balance', 'scorpion', 'sagittaire', 
